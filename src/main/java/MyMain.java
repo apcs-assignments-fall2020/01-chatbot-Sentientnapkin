@@ -4,20 +4,24 @@ public class MyMain {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("What is your name?");
-        String name = scan.nextLine();
-        System.out.println("Good Morning "+ name);
-        System.out.println("What year were you born in?");
-        String age = scan.nextLine();
-        System.out.println(age + " really was a good year wasn't it!");
-        System.out.println("What is your social security number?");
-        String ssnum = scan.nextLine();
-        System.out.println(ssnum+" really rolls right off the tongue.");
+        String nm = scan.nextLine();
+        String name = nm.toUpperCase().charAt(0)+nm.substring(1,nm.length());
+        System.out.println("Good Morning "+ name + ". I hope you have a pleasant rest of your day.");
+        System.out.println("And your favorite color?");
+        String color = scan.nextLine();
+        String favcolor = color.toLowerCase().charAt(0)+color.substring(1,color.length());
+        System.out.println("I dislike "+favcolor+".");
+        System.out.println("What is your favorite brand of water?");
+        String water = scan.nextLine();
+        String favwater = water.toUpperCase().charAt(0)+water.substring(1,water.length());
+        System.out.println(favwater+" is easily in my top 10!");
         System.out.println("Where were you born?");
-        String birthplace = scan.nextLine();
-        System.out.println("I personally love " + birthplace);
-        System.out.println("And yoru favorite color?");
-        String favcolor = scan.nextLine();
-        System.out.println("I personally dislike "+favcolor);
+        String birth = scan.nextLine();
+        String birthplace = birth.toUpperCase().charAt(0)+birth.substring(1,birth.length());
+        System.out.println("I personally love " + birthplace+"!");
+        System.out.println("What year were you born in?");
+        int age = scan.nextInt();
+        System.out.println(age + " really was a time to be alive!");
         scan.close();
     }
 }
